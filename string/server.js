@@ -20,7 +20,9 @@ const http=require('http');
 //     console.log('Finished reading file');
 // });
 
-const writeStream=fs.createWriteStream('./string/info.txt');
+const writeStream=fs.createWriteStream('./string/info.txt',{
+    flags:'a' //append mode
+});
 writeStream.write('\nThis is some line');
 writeStream.write('\nThis is some line');
 writeStream.end('\nThis is the some line');
